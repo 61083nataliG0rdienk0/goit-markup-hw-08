@@ -1,0 +1,21 @@
+@import './utils/vars';
+
+@import './base/reset';
+@import './base/base-styles';
+
+@import './layout/header';
+
+@import './components/header-menu';
+@import './components/header-contacts';
+
+@import './layout/order';
+@import './layout/features';
+@import './layout/activities';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/portfolio';
+
+@import './components/projects';
+
+@import './layout/modal';
