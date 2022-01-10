@@ -12,6 +12,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--second-title-color);
-  color: var(--primary-title-color);
+
+  background-color: $second-title-color;
+
+  color: $primary-title-color;
 }

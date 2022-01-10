@@ -1,8 +1,11 @@
+//-----футер-----//
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--footer-color);
   display: flex;
+
+  background-color: $footer-color;
 }
 
 .footer-container {
@@ -23,18 +26,19 @@
 .footer-logo {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
+  @include fontz(26px, 1.19, 700);
   text-decoration: none;
   display: flex;
   margin-bottom: 20px;
-  color: var(--accent-color);
+
+  color: $accent-color;
 }
 
 .studio-light {
-  color: var(--second-title-color);
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
+
+  color: $second-title-color;
 }
 
 .adress {
@@ -43,23 +47,24 @@
 }
 
 .adress-link {
-  font-size: 14px;
-  line-height: 1.71;
+  @include fontz(14px, 1.71, 400);
   letter-spacing: 0.03em;
-  color: var(--second-title-color);
+
+  color: $second-title-color;
 }
 
 .contacts-link {
-  font-size: 14px;
-  line-height: 1.71;
+  @include fontz(14px, 1.71, 400);
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contacts-link:focus,
-.contacts-link:hover {
-  color: var(--accent-color);
+  color: rgba(255, 255, 255, 0.6);
+
+  @include color;
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .social {
@@ -70,43 +75,45 @@
 .footer-social {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
-  display: block;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fontz(14px, 1.14, 700);
   letter-spacing: 0.03em;
+  display: block;
   text-transform: uppercase;
-  color: var(--second-title-color);
   margin-bottom: 20px;
+
+  color: $second-title-color;
 }
 
 .footer-social-list {
   display: flex;
   justify-content: center;
-}
 
-.footer-social-list .social-link {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  & .social-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    @include background;
+  }
 }
 
 .social-link:hover,
 .social-link:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   fill: currentColor;
 }
 
 .footer-social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--second-title-color);
+
+  fill: $second-title-color;
 }
 
 .footer-sub {
@@ -118,21 +125,21 @@
   height: 50px;
   margin-right: 12px;
   padding: 16px;
-  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  color: var(--second-title-color);
-}
 
-.subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+
+  color: $second-title-color;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .button-subscribe {
   font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.88;
+  @include fontz(16px, 1.88, 700);
   letter-spacing: 0.06em;
   padding: 10px 28px 10px 29px;
   width: 200px;
@@ -140,11 +147,12 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: var(--second-title-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
+
+  color: $second-title-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-text {
@@ -154,5 +162,6 @@
 .sub-icon {
   width: 24px;
   height: 24px;
-  fill: var(--second-title-color);
+
+  fill: $second-title-color;
 }

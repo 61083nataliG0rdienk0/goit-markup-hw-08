@@ -1,13 +1,10 @@
 @import './utils/vars';
+@import './utils/mixin';
 
 @import './base/reset';
 @import './base/base-styles';
 
 @import './layout/header';
-
-@import './components/header-menu';
-@import './components/header-contacts';
-
 @import './layout/order';
 @import './layout/features';
 @import './layout/activities';

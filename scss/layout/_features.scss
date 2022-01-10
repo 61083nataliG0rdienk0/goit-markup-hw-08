@@ -1,3 +1,5 @@
+//-----особенности-----//
+
 .features-list {
   display: flex;
   justify-content: center;
@@ -14,14 +16,13 @@
 
 .features-name {
   text-transform: uppercase;
-  font-weight: bold;
   margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fontz(14px, 1.14, 700);
   letter-spacing: 0.03em;
-  color: var(--primary-title-color);
   width: 270px;
   height: 16px;
+
+  color: $primary-title-color;
 }
 
 .features-icon-bg {
@@ -32,7 +33,8 @@
   width: 270px;
   margin-bottom: 30px;
   border-radius: 4px;
-  background: var(--background-color);
+
+  background: $background-color;
 }
 
 .feature-icon {
@@ -41,11 +43,10 @@
 }
 
 .features-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  @include fontz(14px, 1.71, 400);
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
   width: 270px;
   height: 75px;
+
+  color: $primary-text-color;
 }
