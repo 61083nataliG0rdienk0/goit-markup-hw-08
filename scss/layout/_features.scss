@@ -1,20 +1,20 @@
 //-----особенности-----//
 
-.features-list {
+.features__list {
   display: flex;
   justify-content: center;
 }
 
-.features-item:not(:last-child) {
+.features__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.features-title {
+.features__title {
   visibility: hidden;
   display: none;
 }
 
-.features-name {
+.features__name {
   text-transform: uppercase;
   margin-bottom: 10px;
   @include fontz(14px, 1.14, 700);
@@ -25,7 +25,7 @@
   color: $primary-title-color;
 }
 
-.features-icon-bg {
+.features__icon-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,12 +37,7 @@
   background: $background-color;
 }
 
-.feature-icon {
-  width: 70px;
-  height: 70px;
-}
-
-.features-text {
+.features__text {
   @include fontz(14px, 1.71, 400);
   letter-spacing: 0.03em;
   width: 270px;

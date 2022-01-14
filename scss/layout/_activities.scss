@@ -1,22 +1,10 @@
 //-----чем мы занимаемся-----//
 
-.section-activities {
+.activities__section {
   padding-bottom: 94px;
 }
 
-.activities-list {
-  display: flex;
-}
-
-.activities-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.activities-item {
-  position: relative;
-}
-
-.activities-title {
+.activities__title {
   @include fontz(36px, 1.17, 700);
   text-align: center;
   letter-spacing: 0.03em;
@@ -25,7 +13,19 @@
   color: $primary-title-color;
 }
 
-.activities-text {
+.activities__list {
+  display: flex;
+}
+
+.activities__item {
+  position: relative;
+}
+
+.activities__item:not(:last-child) {
+ margin-right: 30px;
+}
+
+.activities__text {
   font-family: Roboto;
   font-style: normal;
   @include fontz(14px, 1.14, 700);

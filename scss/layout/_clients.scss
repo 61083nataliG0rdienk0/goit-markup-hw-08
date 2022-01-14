@@ -1,22 +1,23 @@
 //-----наши клиенты-----//
 
-.clients-title {
+.clients__title {
   font-family: inherit;
   font-style: normal;
   @include fontz(36px, 1.17, 700);
-  text-align: center;
   letter-spacing: 0.03em;
+
   margin-bottom: 50px;
+  text-align: center;
 
   color: $primary-title-color;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   box-sizing: border-box;
 }
 
-.client-item {
+.clients__item {
   justify-content: center;
 
   &:not(:last-child) {
@@ -24,12 +25,13 @@
   }
 }
 
-.client-link {
+.clients__link {
   width: 170px;
   height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid currentColor;
   border-radius: 4px;
 
@@ -43,18 +45,17 @@
     border-color: $accent-color;
   }
 
-  &:hover .client-icon,
-  &:focus .client-icon {
+  &:hover .clients__icon,
+  &:focus .clients__icon {
     fill: $accent-color;
   }
 }
 
-.client-icon {
+.clients__icon {
   fill: currentColor;
-  width: 106px;
-  height: 60px;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  
   @include fill;
 }

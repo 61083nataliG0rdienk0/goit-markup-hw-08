@@ -1,15 +1,15 @@
 //-----эффективные решения для вашего бизнеса-----//
 
-.section-order {
-  display: flex;
+.order__container {
+  display: block;
   flex-wrap: wrap;
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 200px; 
 
   background-color: $order-color;
 }
 
-.order-overlay {
+.order__overlay {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -22,19 +22,19 @@
   background-size: cover;
 }
 
-.order-text {
+.order__title {
   text-transform: uppercase;
   @include fontz(44px, 1.36, 700);
   letter-spacing: 0.06em;
-  text-align: center;
   align-items: center;
+  text-align: center;
   justify-content: center;
   margin-bottom: 30px;
 
   color: $second-title-color;
 }
 
-.order-button {
+.order__button {
   display: block;
   font-family: Roboto;
   font-style: normal;
@@ -61,6 +61,6 @@
   }
 }
 
-.order-text-button {
+.order__text {
   padding: 10px 32px;
 }
