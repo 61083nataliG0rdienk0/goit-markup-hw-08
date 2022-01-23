@@ -1,6 +1,5 @@
 .header {
-  display: flex;
-  align-items: center;
+  position: relative;
 
   border: 1px solid $line-color;
 }
@@ -10,24 +9,110 @@
   align-items: center;
 }
 
+.mobile__container {
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: fixed;
+    padding: 48px 40px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    background-color: $second-title-color;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// Кнопка "БУРГЕР"
+
+.mobile__button-open {
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  margin-left: auto;
+
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__icon-cross,
+.mobile__icon-menu {
+  @include fill;
+
+  .mobile__button:hover &,
+  .mobile__button:focus & {
+    fill: $accent-color;
+  }
+}
+
 //-----логотип-----//
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include fontz(26px, 1.19, 700);
+  @include fontz(24px, 1.16, 700);
 
   text-decoration: none;
   letter-spacing: 0.03em;
-  margin-right: 93px;
 
   color: $accent-color;
+
+  @media screen and (min-width: 1200px) {
+    @include fontz(26px, 1.19, 700);
+  }
 }
 
 .logo__header {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  width: 145px;
+  display: inline-flex;
+  align-items: flex-end;
+  padding: 15px 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: 88px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo__dark {
@@ -41,7 +126,17 @@
 
 .nav {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 83px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 288px;
+  }
 }
 
 .nav__list {
@@ -50,23 +145,36 @@
 
 .nav__list,
 .nav__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link {
-  display: block;
-  @include fontz(14px, 1.14, 500);
+  display: inline-block;
+  margin-bottom: 32px;
+
+  @include fontz(40px, 1.175, 500);
   letter-spacing: 0.02em;
 
   color: $primary-title-color;
-  @include color;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
-  &:hover,
-  &:focus,
-  &.current {
-    color: $accent-color;
+  @media screen and (min-width: 768px) {
+    @include fontz(14px, 1.14, 500);
+    letter-spacing: 0.02em;
+
+    color: $primary-title-color;
+    @include color;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0;
+
+    &:hover,
+    &:focus,
+    &.current {
+      color: $accent-color;
+    }
   }
 }
 
@@ -75,16 +183,24 @@
   display: inline-flex;
 }
 
+.nav__link.current {
+  color: $accent-color;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
+}
+
 .nav__link.current::after {
   content: '';
-  display: block;
+  position: absolute;
+
   width: 100%;
   height: 4px;
-  bottom: -2px;
-  justify-content: center;
-  align-items: center;
+  bottom: -1px;
+  left: 0;
+
   border-radius: 2px;
-  position: absolute;
 
   background-color: $accent-color;
 }
@@ -93,36 +209,69 @@
 
 .header__contact-list {
   display: flex;
-  margin-left: auto;
-  align-items: center;
+  flex-direction: column-reverse;
 
-  color: $primary-text-color;
-  @include color;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    margin-left: auto;
+  }
 
-  @include fontz(14px, 1.14, 500);
-  letter-spacing: 0.02em;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
-.header__contact-item:not(:last-child){
-  margin-right: 50px;
+.header__contact-item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
 }
 
 .header__contact-link {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
-  cursor: pointer;
+  display: block;
 
-  color: currentColor;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+    @include fontz(12px, 1.16, 500);
+    letter-spacing: 00.02em;
+
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fontz(14px, 1.14, 500);
+  }
+}
+
+.mobile__mail-link {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+    @include fontz(24px, 1.17, 500);
+    letter-spacing: 00.02em;
+
+    color: $primary-text-color;
   }
 }
 
 .header__contact-icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   margin-right: 10px;
   align-items: center;
 
@@ -134,4 +283,19 @@
   }
 }
 
+.mobile-socials__link {
+  display: inline-block;
+  @include fontz(18px, 1.22, 500);
+  letter-spacing: 00.02em;
 
+  color: $accent-color;
+}
+
+.mobile-socials__link:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-socials__link:not(:first-child) {
+  padding-left: 5px;
+}

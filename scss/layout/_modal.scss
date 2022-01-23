@@ -15,8 +15,8 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -27,6 +27,16 @@
   transform: translate(-50%, -50%);
 
   background-color: $second-title-color;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn {
@@ -35,12 +45,15 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+
   position: absolute;
   top: 8px;
   right: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   color: #000000;
   background: $second-title-color;
@@ -70,11 +83,17 @@
 .modal-form__head {
   font-family: 'Roboto';
   font-style: normal;
-  @include fontz(20px, 1.15, 700);
+  @include fontz(20px, 1.5, 700);
   letter-spacing: 0.03em;
+  text-align: center;
+
   margin-bottom: 12px;
 
   color: $primary-title-color;
+
+  @media screen and (min-width: 1200px) {
+    @include fontz(20px, 1.15, 700);
+  }
 }
 
 .modal-form__item {
@@ -82,6 +101,7 @@
   font-style: normal;
   @include fontz(12px, 1.17, 400);
   letter-spacing: 0.01em;
+
   margin-bottom: 10px;
 
   color: $primary-text-color;
@@ -112,6 +132,15 @@
     outline: none;
 
     border-color: $accent-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
   }
 }
 
@@ -155,12 +184,32 @@
 
     border-color: $accent-color;
   }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.16;
+    }
+  }
+}
+
+.modal-form-checkbox {
+  position: relative;
+  text-align: center;
 }
 
 .modal-form__checkbox--contract {
   font-family: Roboto;
   font-style: normal;
-  @include fontz(14px, 1.71, 400);
+  @include fontz(12px, 1.17, 400);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,6 +226,10 @@
 
     border: 2px solid $primary-title-color;
     @include border;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fontz(14px, 1.71, 400);
   }
 }
 

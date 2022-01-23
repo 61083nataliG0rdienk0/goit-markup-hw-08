@@ -20,44 +20,69 @@
 
 <body>
 
-    <header class="header">
-        <div class="container header__wrapper">
+<header class="header">
+
+    <div class="container header__wrapper">
+
+        <a class="logo logo__header" href="./index.html">Web<span class="logo__dark">Studio</span></a>
+
+        <button type="button" class="mobile__button-open" aria-expanded="false" aria-controls="mobile__container">
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="mobile__icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+        </button>
+
+        <div class="mobile__container mobile__menu" id="mobile__container">
+
+            <button type="button" class="mobile__button-close">
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="mobile__icon-cross" href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
 
             <nav class="nav">
-
-                <a lang="en" class="logo logo__header" href="./index.html">Web<span class="logo__dark">Studio</span></a>
-
                 <ul class="nav__list list">
-
-                    <li class="nav__item"><a href="./index.html" class="nav__link">Студия</a></li>
-                    <li class="nav__item"><a href="./portfolio.html" class="nav__link current">Портфолио</a></li>
-                    <li class="nav__item"><a href="mailto:info@devstudio.com-telto:+380961111111" class="nav__link">Контакты</a></li>
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link current">Студия</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./portfolio.html" class="nav__link">Портфолио</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="mailto:info@devstudio.com-telto:+380961111111" class="nav__link">Контакты</a>
+                    </li>
                 </ul>
-
             </nav>
+
+            <div class="mobile__position">
 
                 <ul class="header__contact-list list">
                     <li class="header__contact-item">
-                        <a href="mailto:info@devstudio.com" class="header__contact-link">
+                        <a class="header__contact-link mobile__mail-link" href="mailto:info@devstudio.com">
                             <svg class="header__contact-icon" width="16" height="12">
                                 <use href="./img/sprite-connection.svg#icon-envelope"></use>
                             </svg>
-                            info@devstudio.com
-                        </a>
+                            info@devstudio.com</a>
                     </li>
+
                     <li class="header__contact-item">
                         <a href="telto:+380961111111" class="header__contact-link">
                             <svg class="header__contact-icon" width="10" height="16">
                                 <use href="./img/sprite-connection.svg#icon-vector"></use>
                             </svg>
-                            +38 096 111 11 11
-                        </a>
+                            +38 096 111 11 11</a>
                     </li>
                 </ul>
-
+                <div class="mobile-socials">
+                    <a class="mobile-socials__link" href="#">Instagram</a>
+                    <a class="mobile-socials__link" href="#">Twitter</a>
+                    <a class="mobile-socials__link" href="#">Facebook</a>
+                    <a class="mobile-socials__link" href="#">LinkedIn</a>
+                </div>
+            </div>
         </div>
-
-    </header>
+    </div>
+</header>
     
 <main>
 
@@ -77,7 +102,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/photo-web-site.jpg" alt="фотография сайта на экране" height="294">
+                            <img src="./img/photo-web-site.jpg" alt="фотография сайта на экране" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                             шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -91,7 +116,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/bascketball.jpg" alt="баскетболлисты" height="294">
+                            <img src="./img/bascketball.jpg" alt="баскетболлисты" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -106,7 +131,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/seafood.jpg" alt="ресторан seafood" height="294">
+                            <img src="./img/seafood.jpg" alt="ресторан seafood" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -121,7 +146,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/headphones.jpg" alt="наушники" height="294">
+                            <img src="./img/headphones.jpg" alt="наушники" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -136,7 +161,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/boxes.jpg" alt="коробки" height="294">
+                            <img src="./img/boxes.jpg" alt="коробки" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -151,7 +176,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/monitor.jpg" alt="монитор" height="294">
+                            <img src="./img/monitor.jpg" alt="монитор" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -166,7 +191,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/edition.jpg" alt="издание" height="294">
+                            <img src="./img/edition.jpg" alt="издание" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -181,7 +206,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/tag.jpg" alt="бирка" height="294">
+                            <img src="./img/tag.jpg" alt="бирка" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -196,7 +221,7 @@
                 <li class="product__icons">
                     <a href="#" class="product__element">
                         <div class="product__overflow">
-                            <img src="./img/growing-business.jpg" alt="открытый ноутбук" height="294">
+                            <img src="./img/growing-business.jpg" alt="открытый ноутбук" class="product__img">
                             <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                 платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.
@@ -214,75 +239,73 @@
 </main>
 
 <footer class="footer">
-    <div class="footer__container container">
-        <div class="footer__wrapper">
-
-        <a href="./index.html" class="logo footer__logo">Web<span class="logo__light">Studio</span></a>
-            <address class="adress">
+    <div class="container footer__container">
+        <div class="footer__float">
+            <div class="footer__wrapper">
+                <a href="./index.html" class="logo logo__footer">Web<span class="logo__light">Studio</span></a>
+                <address class="adress">
                     <ul class="adress__list list">
-                        <li class="adress__item"><a href="#" class="adress__link--light link">г. Киев, пр-т Леси Украинки, 26</a></li>
-                        <li class="adress__item"><a href="mailto:info@example.com" class="adress__link link">info@example.com</a></li>
-                        <li class="adress__item"><a href="telto:+380991111111" class="adress__link link">+38 099 111 11 11</a></li>
+                        <li class="adress__item"><a href="#" class="adress__link--light link">г. Киев, пр-т Леси
+                                Украинки, 26</a></li>
+                        <li class="adress__item"><a href="mailto:info@example.com"
+                                class="adress__link link">info@example.com</a></li>
+                        <li class="adress__item"><a href="telto:+380991111111" class="adress__link link">+38 099 111 11
+                                11</a></li>
                     </ul>
-            </address>
-        </div> 
-        <div class="footer-social">
-            <p class="footer-social__title">Присоединяйтесь</p> 
-            <ul class="footer-social__list list">
-                <li class="footer-social__item">
-                    <a href="" class="footer-social__link">
-                        <svg class="footer-social__icon" width="20" height="20">
-                            <use href="./img/sprite-icon.svg#icon-instagram">
-                            </use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-social__item">
-                    <a href="" class="footer-social__link">
-                        <svg class="footer-social__icon" width="20" height="20">
-                            <use href="./img/sprite-icon.svg#icon-twitter">
-                            </use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-social__item">
-                    <a href="" class="footer-social__link">
-                        <svg class="footer-social__icon" width="20" height="20">
-                            <use href="./img/sprite-icon.svg#icon-facebook">
-                            </use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-social__item">
-                    <a href="" class="footer-social__link">
-                        <svg class="footer-social__icon" width="20" height="20">
-                            <use href="./img/sprite-icon.svg#icon-linkedin">
-                            </use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+                </address>
+            </div>
+
+            <div class="footer-social">
+                <p class="footer-social__title">Присоединяйтесь</p>
+                <ul class="footer-social__list list">
+                    <li class="footer-social__item">
+                        <a href="#" class="footer-social__link">
+                            <svg class="footer-social__icon" width="20" height="20">
+                                <use href="./img/sprite-icon.svg#icon-instagram">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a href="" class="footer-social__link">
+                            <svg class="footer-social__icon" width="20" height="20">
+                                <use href="./img/sprite-icon.svg#icon-twitter">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a href="" class="footer-social__link">
+                            <svg class="footer-social__icon" width="20" height="20">
+                                <use href="./img/sprite-icon.svg#icon-facebook">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a href="" class="footer-social__link">
+                            <svg class="footer-social__icon" width="20" height="20">
+                                <use href="./img/sprite-icon.svg#icon-linkedin">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <form class="form-sub" name="email" action="#">
             <p class="footer-social__title">Подпишитесь на рассылку</p>
             <div class="footer-sub">
                 <label for="email" class="subscribe-email"></label>
-                <input 
-                class="footer-sub__input" 
-                type="email" 
-                name="email" 
-                id="email" 
-                minlength="5"
-                placeholder="E-mail"
-                required
-                />
+                <input class="footer-sub__input" type="email" name="email" id="email" minlength="5" placeholder="E-mail"
+                    required />
                 <button type="submit" class="footer-sub__button">
                     <span class="footer-sub__text">Подписаться</span>
-                    <svg class="footer-sub__icon">
+                    <svg class="footer-sub__icon" width="24" height="24">
                         <use href="./img/sprite-sand.svg#icon-send">
                         </use>
                     </svg>
-                    </button>    
+                </button>
             </div>
         </form>
     </div>

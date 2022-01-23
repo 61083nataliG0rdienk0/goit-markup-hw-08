@@ -1,12 +1,34 @@
 //-----особенности-----//
 
 .features__list {
-  display: flex;
-  justify-content: center;
+  @media screen and(min-width: 480px) {
+    display: grid;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .features__item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-right: 0;
+  }
 }
 
 .features__title {
@@ -16,13 +38,18 @@
 
 .features__name {
   text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: 10px;
+  padding-top: 30px;
   @include fontz(14px, 1.14, 700);
   letter-spacing: 0.03em;
-  width: 270px;
-  height: 16px;
+  text-align: center;
 
   color: $primary-title-color;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .features__icon-bg {
@@ -30,18 +57,20 @@
   justify-content: center;
   align-items: center;
   height: 120px;
-  width: 270px;
-  margin-bottom: 30px;
+
   border-radius: 4px;
 
   background: $background-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .features__text {
-  @include fontz(14px, 1.71, 400);
-  letter-spacing: 0.03em;
-  width: 270px;
-  height: 75px;
-
   color: $primary-text-color;
+
+  @include fontz(14px, 1.71, 400);
+  margin-top: 0;
+  margin-bottom: 0;
 }

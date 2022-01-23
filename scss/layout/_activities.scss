@@ -2,6 +2,10 @@
 
 .activities__section {
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .activities__title {
@@ -15,14 +19,15 @@
 
 .activities__list {
   display: flex;
-}
-
-.activities__item {
   position: relative;
 }
 
-.activities__item:not(:last-child) {
- margin-right: 30px;
+.activities__item {
+  width: 370px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .activities__text {
@@ -40,8 +45,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%;
+  width: 370px;
   height: 70px;
-  left: 0px;
+  margin: 0px;
   bottom: 0px;
 }
