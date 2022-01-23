@@ -25,7 +25,7 @@
 
             <button type="button" class="mobile__button-open" aria-expanded="false" aria-controls="mobile__container">
                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="mobile__icon-menu" href="./images/icons.svg#icon-menu"></use>
+                    <use class="mobile__icon-menu" href="./img/icons.svg#icon-icon-menu"></use>
                 </svg>
             </button>
                 
@@ -33,22 +33,14 @@
             
                 <button type="button" class="mobile__button-close">
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                        <use class="mobile__icon-cross" href="./images/icons.svg#icon-cross"></use>
+                        <use class="mobile__icon-cross" href="./img/icons.svg#icon-icon-cross"></use>
                     </svg>
                 </button>
 
                 <nav class="nav">
-                <ul class="nav__list list">
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__link current">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./portfolio.html" class="nav__link">Портфолио</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="mailto:info@devstudio.com-telto:+380961111111" class="nav__link">Контакты</a>
-                    </li>
-                </ul>
+                    <a href="./index.html" class="nav__link current">Студия</a>
+                    <a href="./portfolio.html" class="nav__link">Портфолио</a>
+                    <a href="mailto:info@devstudio.com-telto:+380961111111" class="nav__link">Контакты</a>
                 </nav>
 
                 <div class="mobile__position">
@@ -62,7 +54,7 @@
                             info@devstudio.com</a></li>
 
                         <li class="header__contact-item">
-                            <a href="telto:+380961111111" class="header__contact-link">
+                            <a href="telto:+380961111111" class="header__contact-link mobile__phone-link">
                                 <svg class="header__contact-icon" width="10" height="16">
                                     <use href="./img/sprite-connection.svg#icon-vector"></use>
                                 </svg>
@@ -142,15 +134,24 @@
 
         <ul class="activities__list list">
             <li class="activities__item">
-            <img src="./img/coding.jpg" alt="программист набирает код" width="370" height="294">
+            <picture>
+                <source media='(min-width: 1200px)' srcset='./img/coding.jpg 1x, ./img/coding@2x.jpg 2x'>
+                <img src="./img/coding.jpg" alt="программист набирает код" width="370" height="294">
+            </picture>
             <p class="activities__text">Десктопные приложения</p>
             </li>
             <li class="activities__item">
-            <img src="./img/phone-and-notebook.jpg" alt="веб дизайнер применяет телефон в разработке" width="370" height="294">
+            <picture>
+                <source media='(min-width: 1200px' srcset="./img/phone-and-notebook.jpg 1x, ./img/phone-and-notebook@2x.jpg 2x">
+                <img src="./img/phone-and-notebook.jpg" alt="веб дизайнер применяет телефон в разработке" width="370" height="294">
+            </picture>
             <p class="activities__text">Мобильные приложения</p>
             </li>
             <li class="activities__item">
-            <img src="./img/designering.jpg" alt="дизайнер выбирает цвет" width="370" height="294">
+            <picture>
+                <source media='(min-width: 1200px)' srcset="./img/designering.jpg 1x, ./img/designering@2x.jpg 2x">
+                <img src="./img/designering.jpg" alt="дизайнер выбирает цвет" width="370" height="294">
+            </picture>
             <p class="activities__text">Дизайнерские решения</p>
             </li>
         </ul>
@@ -164,7 +165,12 @@
 
     <ul class="team__list list">
         <li class="team__item">
-            <img src="./img/igor-d.jpg" alt="игорь демьяненко" class="team__img">
+            <picture>
+                <source media='(min-width: 1200px)' srcset="./img/igor-d.jpg 1x">
+                <source media='(min-width: 768px)'srcset="./img/igor-t@1x.jpg 1x, ./img/igor-t@2x.jpg 2x">
+                <source media='(min-width: 480px)' srcset="./img/igor-m@1x.jpg 1x, ./img/igor-m@2x.jpg 2x">
+                <img src="./img/igor-d.jpg" alt="игорь демьяненко" class="team__img">
+            </picture>
             <div class="team__content">
 
                 <h3 class="team__member">Игорь Демьяненко</h3>
@@ -211,7 +217,12 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./img/olga-r.jpg" alt="ольга репина" class="team__img">
+            <picture>
+                <source media='min-width: 1200px' srcset="./img/olga-r.jpg">
+                <source media='min-width: 786px' srcset="./img/olga-t@1x.jpg 1x, ./img/olga-t@2x.jpg 2x">
+                <source media='min-width: 480px' srcset="./img/olga-m@1x.jpg 1x, ./img/olga-m@2x.jpg 2x">
+                <img src="./img/olga-r.jpg" alt="ольга репина" class="team__img">
+            </picture>
             <div class="team__content">
                 <h3 class="team__member">Ольга Репина</h3>
                 <p lang="en" class="team__profession">Frontend Developer</p>
@@ -252,7 +263,12 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./img/nickolay-t.jpg" alt="николай тарасов" class="team__img">
+            <picture>
+                <source media='min-width: 1200px' srcset="./img/nickolay-t.jpg">
+                <source media='min-width: 768px' srcset="./img/nickolay-t@1x.jpg 1x, ./img/nickolay-t@2x.jpg 2x">
+                <source media='min-width: 480px' srcset="./img/nickolay-m@1x.jpg 1x, ./img/nickolay-m@2x.jpg 2x">
+                <img src="./img/nickolay-t.jpg" alt="николай тарасов" class="team__img">
+            </picture>
             <div class="team__content">
                 <h3 class="team__member">Николай Тарасов</h3>
                 <p lang="en" class="team__profession">Marketing</p>
@@ -293,7 +309,12 @@
             </div>
         </li>
         <li class="team__item">
-            <img src="./img/michael-e.jpg" alt="михаил ермаков" class="team__img">
+            <picture>
+                <source media='min-width: 1200px' srcset="./img/michael-e.jpg">
+                <source media='min-width: 768px' srcset="./img/michael-t@1x.jpg 1x, ./img/michael-t@2x.jpg 2x">
+                <source media='min-width: 480px' srcset="./img/michael-m@1x.jpg 1x, ./img/michael-m@2x.jpg 2x">
+                <img src="./img/michael-e.jpg" alt="михаил ермаков" class="team__img">
+            </picture>
             <div class="team__content">
                 <h3 class="team__member">Михаил Ермаков</h3>
                 <p lang="en" class="team__profession">UI Designer</p>
@@ -544,6 +565,11 @@
         </form>
     </div>
 </div>
-<script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+        </script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

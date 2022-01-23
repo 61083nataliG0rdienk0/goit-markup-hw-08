@@ -36,7 +36,7 @@
   }
 }
 
-// Кнопка "БУРГЕР"
+//-----"БУРГЕР"
 
 .mobile__button-open {
   padding: 0;
@@ -74,7 +74,7 @@
 
 .mobile__icon-cross,
 .mobile__icon-menu {
-  @include fill;
+  fill: $primary-title-color;
 
   .mobile__button:hover &,
   .mobile__button:focus & {
@@ -139,17 +139,6 @@
   }
 }
 
-.nav__list {
-  display: flex;
-}
-
-.nav__list,
-.nav__item:not(:last-child) {
-  @media screen and (min-width: 768px) {
-    margin-right: 50px;
-  }
-}
-
 .nav__link {
   display: inline-block;
   margin-bottom: 32px;
@@ -178,9 +167,10 @@
   }
 }
 
-.nav__item {
-  position: relative;
-  display: inline-flex;
+.nav__link:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link.current {
@@ -229,8 +219,12 @@
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
-    margin-right: 50px;
+    margin-right: 30px;
   }
+}
+
+.header__contact-item {
+  color: $primary-text-color;
 }
 
 .header__contact-link {
@@ -267,6 +261,16 @@
   }
 }
 
+.mobile__phone-link {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    @include fontz(34px, 1.17, 500);
+    letter-spacing: 00.02em;
+
+    color: $accent-color;
+  }
+}
+
 .header__contact-icon {
   @media screen and (max-width: 767px) {
     display: none;
@@ -275,11 +279,17 @@
   margin-right: 10px;
   align-items: center;
 
-  fill: currentColor;
+  fill: $primary-text-color;
 
   &:hover,
   &:focus {
     fill: $accent-color;
+  }
+}
+
+.mobile-socials {
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
