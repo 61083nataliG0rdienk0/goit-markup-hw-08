@@ -20,7 +20,7 @@
 
 .team__title {
   font-family: inherit;
-  @include fontz(36px, 1.17, 700);
+  @include fontz(28px, 1.18, 700);
   letter-spacing: 0.03em;
 
   color: $primary-title-color;
@@ -29,6 +29,7 @@
   margin-bottom: 30px;
 
   @media screen and (min-width: 1200px) {
+    @include fontz(36px, 1.17, 700);
     margin-bottom: 50px;
   }
 }

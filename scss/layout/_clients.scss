@@ -2,13 +2,18 @@
 .clients__title {
   font-family: inherit;
   font-style: normal;
-  @include fontz(36px, 1.17, 700);
+  @include fontz(28px, 1.18, 700);
   letter-spacing: 0.03em;
 
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 
   color: $primary-title-color;
+
+  @media screen and (min-width: 1200px) {
+    @include fontz(36px, 1.17, 700);
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
@@ -16,24 +21,20 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
+    row-gap: 30px;
   }
 
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
+    row-gap: 30px;
   }
 
   @media screen and (min-width: 1200px) {
     display: inline-grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 30px;
-  }
-}
-
-.clients__item:not(:last-child) {
-  @media screen and (min-width: 480px) {
-    margin-bottom: 30px;
   }
 }
 
